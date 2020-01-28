@@ -51,11 +51,10 @@ public final class HistoryData: ObservableObject {
     
     // MARK: Methods.
     public func go(_ path: String, replace: Bool = false) {
-        print("Router.go(\(path))")
         guard path != self.path else {
             return
         }
-        
+        print("Router.go(\(path))")
         forwardStack.removeAll()
         if replace {
             historyStack[max(historyStack.count - 1, 0)] = path
