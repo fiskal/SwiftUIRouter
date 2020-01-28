@@ -51,6 +51,7 @@ public final class HistoryData: ObservableObject {
     
     // MARK: Methods.
     public func go(_ path: String, replace: Bool = false) {
+        print("Router.go(\(path))")
         guard path != self.path else {
             return
         }
